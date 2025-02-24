@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Área do Servidor</h1>
+        <form action="{{ url_for('verificar_servidor') }}" method="POST">
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required>
+            
+            <button type="submit">Verificar Dados</button>
+        </form>
+
+        {% if dados_servidor %}
+            <div class="dados-servidor">
+                <h2>Dados do Servidor</h2>
+                <p>Nome: {{ dados_servidor.nome }}</p>
+                <p>Cargo: {{ dados_servidor.cargo }}</p>
+                <p>Idade: {{ dados_servidor.idade }}</p>
+                <p>Sexo: {{ dados_servidor.sexo }}</p>
+
+                <form action="{{ url_for('emitir_guia') }}" method="POST">
+                    <label for="email">E-mail para envio da guia:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telefone">Telefone (WhatsApp):</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+
+                    <button type="submit">Emitir Guia</button>
+                </form>
+            </div>
+        {% endif %}
+
+        {% if guia_emitida %}
+            <div class="guia-emitida">
+                <h2>Guia Emitida</h2>
+                <p>Data e Hora: {{ guia_emitida.data_hora }}</p>
+                <p>E-mail: {{ guia_emitida.email }}</p>
+                <p>Telefone: {{ guia_emitida.telefone }}</p>
+                <p>Se você não solicitou esta guia, entre em contato com o NUBES.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

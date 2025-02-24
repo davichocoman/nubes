@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Área de Administração</h1>
+
+        <div class="gestao-cadastros">
+            <h2>Gestão de Cadastros</h2>
+            <ul>
+                <li><a href="{{ url_for('cadastrar_servidor') }}">Cadastrar Servidor</a></li>
+                <li><a href="{{ url_for('cadastrar_credenciada') }}">Cadastrar Clínica/Hospital</a></li>
+                <li><a href="{{ url_for('cadastrar_admin') }}">Cadastrar Administrador</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard">
+            <h2>Estatísticas</h2>
+            <div class="graficos">
+                <p>Guias Emitidas:</p>
+                <ul>
+                    <li>Ano: {{ estatisticas.guias_ano }}</li>
+                    <li>Mês: {{ estatisticas.guias_mes }}</li>
+                    <li>Semana: {{ estatisticas.guias_semana }}</li>
+                </ul>
+
+                <p>Exames Realizados:</p>
+                <ul>
+                    {% for exame, quantidade in estatisticas.exames_realizados.items() %}
+                        <li>{{ exame }}: {{ quantidade }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

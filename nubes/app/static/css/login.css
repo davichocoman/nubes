@@ -1,0 +1,183 @@
+/* Estilos para dispositivos móveis (até 700px) */
+@media (max-width: 700px) {
+    .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Ajuste a largura para dispositivos móveis */
+        max-width: 400px; /* Largura máxima */
+        height: auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+        z-index: 1; /* Garante que o login fique acima da logo */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        text-align: center;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+    }
+
+    button {
+        background: rgb(45, 126, 231);
+        color: white;
+        font-size: 16px;
+    }
+
+    .show-password {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .show-password input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    
+    .show-password label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+    }
+}
+
+/* Estilos para tablets (701px a 1023px) */
+@media (min-width: 701px) and (max-width: 1023px) {
+    .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+        z-index: 1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    input, button {
+        text-align: center;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+    }
+
+    button {
+        background: rgb(45, 126, 231);
+        color: white;
+        font-size: 18px;
+    }
+
+    .show-password {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .show-password input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    
+    .show-password label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+    }
+}
+
+/* Estilos para desktops (acima de 1024px) */
+@media (min-width: 1024px) {
+    .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+        z-index: 1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+
+    input, button {
+        text-align: center;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+    }
+
+    button {
+        background: rgb(45, 126, 231);
+        color: white;
+        font-size: 20px;
+    }
+
+    .show-password {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .show-password input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    
+    .show-password label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Área da Rede Credenciada</h1>
+        <form action="{{ url_for('login_credenciada') }}" method="POST">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        {% if autenticado %}
+            <div class="verificar-guia">
+                <h2>Verificar Guia</h2>
+                <form action="{{ url_for('verificar_guia') }}" method="POST">
+                    <label for="codigo_guia">Código da Guia:</label>
+                    <input type="text" id="codigo_guia" name="codigo_guia" required>
+
+                    <button type="submit">Verificar</button>
+                </form>
+            </div>
+
+            {% if guia_valida %}
+                <div class="guia-valida">
+                    <h2>Guia Válida</h2>
+                    <p>Exames:</p>
+                    <ul>
+                        {% for exame in guia_valida.exames %}
+                            <li>{{ exame }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <form action="{{ url_for('registrar_exame') }}" method="POST">
+                        <label for="data_exame">Data do Exame:</label>
+                        <input type="date" id="data_exame" name="data_exame" required>
+
+                        <button type="submit">Registrar Exame</button>
+                    </form>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}
