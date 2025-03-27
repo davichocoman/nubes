@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emissão de Guias - NUBES</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Corrigir o caminho do arquivo CSS -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <title>{% block title %}NUBES{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <!-- Logo grande e transparente no fundo -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #011a3b;">
+        <div class="container">
+            <a class="navbar-brand" href="#">NUBES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servidores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Rede Credenciada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Administração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="logo-background"></div>
     
-    <div class="container">
-        <!-- Aqui o conteúdo da página será inserido -->
-        {% block content %}  <!-- Bloco de conteúdo a ser preenchido pelas páginas filhas -->
-        {% endblock %}
-    </div>
-
-    <footer class="footer bg-dark text-white text-center py-3">
-        <p>&copy; 2025 NUBES - Justiça Federal da Bahia</p>
+    <main class="container mt-4">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer class="text-center text-white py-3 mt-4" style="background-color: #3d5a80;">
+        <p>&copy; 2024 NUBES - Justiça Federal da Bahia</p>
     </footer>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

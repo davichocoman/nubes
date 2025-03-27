@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Bungee+Tint&display=swap');
+
+.card {
+    background-color: white !important;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-init{
+    color: white;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px;
+  
+}
+
+.text-init_sub{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  
+}
+
 /* Estilos para dispositivos móveis (até 600px) */
 @media (max-width: 700px) {
+    .col-12 {
+        margin-bottom: 20px; /* Adiciona espaçamento entre os cards em telas pequenas */
+    }
+    .col-md-4 {
+        margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+    }
     body {
         background-color: #0066cc;
         color: white;
@@ -14,7 +47,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('https://i.imgur.com/PWlsUaX.png'); /* Caminho da sua logo */
+        background-image: url('https://i.imgur.com/gVcg3Vi.png'); /* Caminho da sua logo */
         background-size: cover; /* A logo vai cobrir toda a tela */
         background-position: center; /* A logo fica centralizada */
         background-repeat: no-repeat;
@@ -36,6 +69,12 @@
 
 /* Estilos para tablets (600px a 768px) */
 @media (min-width: 701px) and (max-width: 1023px) {
+    .col-md-4 {
+        margin-bottom: 20px; /* Adiciona espaçamento entre os cards em telas médias */
+    }
+    .col-md-4 {
+        margin-bottom: 20px; /* Espaçamento também para tablets */
+    }
     body {
         background-color: #0066cc;
         color: white;
@@ -50,7 +89,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('https://i.imgur.com/XMDSIfP.png'); /* Caminho da sua logo */
+        background-image: url('https://i.imgur.com/gVcg3Vi.png'); /* Caminho da sua logo */
         background-size: cover; /* A logo vai cobrir toda a tela */
         background-position: center; /* A logo fica centralizada */
         background-repeat: no-repeat;
@@ -86,7 +125,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('https://i.imgur.com/TDVShcH.png'); /* Caminho da sua logo */
+        background-image: url('https://i.imgur.com/gVcg3Vi.png'); /* Caminho da sua logo */
         background-size: cover; /* A logo vai cobrir toda a tela */
         background-position: center; /* A logo fica centralizada */
         background-repeat: no-repeat;
